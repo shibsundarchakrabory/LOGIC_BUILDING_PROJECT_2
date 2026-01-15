@@ -1,20 +1,31 @@
 :root {
-/* color variables */
-  --primary-color: #212121;
-  --secondary-color: #ffffff;
+  --bg-primary-color: #000000;
+  --bg-secondary-color: #212121;
   --bg-color: #ffffff;
-/* Text variables */
-  --text-color: #333333;
-/* color variables */
-  --space-xs:4px;
-  --space-xm:8px;
-  --space-md:16px;
-  --space-mg:24px;
-  --space-xl:32px;
-  --space-2xl:40px;
-  --space-3xl:48px;
-}
+  --button-color:#81ffad;
+  --button-delet-color:#ff6b6b;
 
+  --text-color: #ffffff;
+
+  /** spacing variables */
+  --padding-xs: 4px;
+  --padding-sm: 8px;
+  --padding-md: 16px;
+  --padding-lg: 24px;
+  --padding-xl: 32px;
+  --padding-2xl: 40px;
+  --padding-3xl: 48px;
+
+  /* *border colors */
+  --border-primery: #212121;
+  --border-radius-xs: 4px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 20px;
+  --border-radius-2xl: 24px;
+  --border-radius-50-Pencent: 50%;
+}
 *,
 *::before,
 *::after {
@@ -27,9 +38,99 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--bg-color);
+  font-family: "Arial", sans-serif;
+  background-color: var(--bg-primary-color);
   color: var(--text-color);
   line-height: 1.5;
 }
+
+main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+nav{
+  padding: var(--padding-md) var(--padding-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav button {
+  background: var(--button-color);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border: none;
+  padding: var(--padding-md) var(--padding-lg);
+  cursor: pointer;
+  border-radius: var(--border-radius-2xl);
+  
+
+}
+
+
+section {
+  padding: var(--padding-2xl);
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: var(--padding-2xl);
+}
+
+
+section .task-colomns {
+  background-color: var(--bg-secondary-color);
+  width: 30%;
+  border-radius: var(--border-radius-lg);
+  padding: var(--padding-lg);
+  flex-grow: 1;
+}
+
+
+section .task-colomns .headin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--padding-md);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+section .task-colomns  .task {
+  background-color: var(--bg-primary-color);
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--padding-md);
+  display: flex;
+  flex-direction: column;
+}
+
+
+section .task-colomns  .task button {
+  align-self: flex-end;
+  cursor: pointer;
+  padding: var(--padding-sm) var(--padding-md);
+  border-radius: var(--border-radius-md);
+  border: none;
+  background-color: var(--button-delet-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
 
