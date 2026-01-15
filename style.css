@@ -1,0 +1,35 @@
+:root {
+/* color variables */
+  --primary-color: #212121;
+  --secondary-color: #ffffff;
+  --bg-color: #ffffff;
+/* Text variables */
+  --text-color: #333333;
+/* color variables */
+  --space-xs:4px;
+  --space-xm:8px;
+  --space-md:16px;
+  --space-mg:24px;
+  --space-xl:32px;
+  --space-2xl:40px;
+  --space-3xl:48px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
