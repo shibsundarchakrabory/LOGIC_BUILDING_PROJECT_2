@@ -11,28 +11,28 @@
       <nav>
         <div class="left">Kanben</div>
         <div class="right">
-          <button>Add new Task</button>
+          <button id="togleModal">Add new Task</button>
         </div>
       </nav>
       <section class="board">
-        <div class="task-colomns">
+        <div id="todo" class="task-colomns">
           <div class="headin">
             <div class="feft">To Do</div>
             <div class="right">Count</div>
           </div>
-          <div class="task">
+          <div draggable="true" class="task">
             <h2>Task 1</h2>
             <p>Description</p>
             <button>Delet</button>
           </div>
         </div>
-        <div class="task-colomns">
+        <div id="prograss" class="task-colomns">
           <div class="headin">
             <div class="feft">In progress</div>
             <div class="right">Count</div>
           </div>
         </div>
-        <div class="task-colomns">
+        <div id="done" class="task-colomns">
           <div class="headin">
             <div class="feft">Done</div>
             <div class="right">Count</div>
@@ -40,6 +40,14 @@
         </div>
       </section>
     </main>
+    <div class="modal ad-new-task">
+      <div class="bg"></div>
+      <div class="center">
+        <input type="text" placeholder="Task Task" />
+        <textarea placeholder="Task description"></textarea>
+        <button id="add-new-task" class="add-task-button">Create task</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

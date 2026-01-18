@@ -4,8 +4,10 @@
   --bg-color: #ffffff;
   --button-color:#81ffad;
   --button-delet-color:#ff6b6b;
+  --modal-center-bg: #3f3f3f;
 
-  --text-color: #ffffff;
+  --text-color-light: #ffffff;
+  --text-color-dark: #000000;
 
   /** spacing variables */
   --padding-xs: 4px;
@@ -40,7 +42,8 @@ body {
   height: 100%;
   font-family: "Arial", sans-serif;
   background-color: var(--bg-primary-color);
-  color: var(--text-color);
+  color: var(--text-color-light);
+  /* color: var(--text-color-dark); */
   line-height: 1.5;
 }
 
@@ -88,8 +91,15 @@ section .task-colomns {
   border-radius: var(--border-radius-lg);
   padding: var(--padding-lg);
   flex-grow: 1;
+  transition: all 0.5s cubic-bezier(0.9, 1, 0.22, 1);
 }
 
+/* section .task-colomns  */
+.hover-over {
+  border: 2px dashed var(--text-color-light);
+  /* border: 2px dashed var(--text-color-dark); */
+  scale: 1.02;
+}
 
 section .task-colomns .headin {
   display: flex;
@@ -108,6 +118,7 @@ section .task-colomns  .task {
   margin-bottom: var(--padding-md);
   display: flex;
   flex-direction: column;
+  cursor: grab;
 }
 
 
@@ -118,19 +129,69 @@ section .task-colomns  .task button {
   border-radius: var(--border-radius-md);
   border: none;
   background-color: var(--button-delet-color);
-  color: var(--text-color);
+  color: var(--text-color-light);
+  /* color: var(--text-color-dark); */
   font-weight: bold;
+  /* conner-shape: bavel; */
 }
   
 
 
+.modal{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display:none;
+  align-items: center;
+  justify-content: center;
+}
+
+.active{
+  display: flex;
+}
 
 
+.modal .bg{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 5;
+}
+
+.center{
+  background: var(--modal-center-bg);
+  padding: var(--padding-2xl);
+  border-radius: var(--border-radius-sm);
+  display:flex ;
+  flex-direction: column;
+  gap: var(--padding-sm);
+  z-index: 10;
+}
 
 
+.center input, .center textarea, .center select {
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-sm);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
 
-
-
-
+.center button {
+  margin-top: var(--padding-md);
+  padding: var(--padding-md);
+  border: none;
+  border-radius: var(--border-radius-xl);
+  background-color: var(--button-color);
+  color: var(--text-color-dark);
+  font-weight:600;
+  cursor: pointer;
+}
 
 
