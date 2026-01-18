@@ -40,6 +40,9 @@ if (localStorage.getItem("tasks")) {
     const count = columns.querySelector(".right");
     if (count) count.innerText = data[column].length;
   }
+
+
+  
 }
 
 console.log(todo, prograss, done);
