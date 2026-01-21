@@ -47,6 +47,20 @@ body {
   line-height: 1.5;
 }
 
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-right: var(--padding-md);
+  border-radius: var(--border-radius-50-Pencent);
+}
+
+.left{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 main{
   height: 100%;
   display: flex;
@@ -59,6 +73,10 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-secondary-color);
+  z-index: 100;
 }
 
 
